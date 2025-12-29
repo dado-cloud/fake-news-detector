@@ -47,24 +47,6 @@ The trained model predicts whether an article is REAL or FAKE
 
 A confidence-like score is shown based on the model’s decision function
 
- Project structure
-
-fake-news-detector/
-├── app/
-│ └── streamlit_app.py (Web interface)
-├── src/
-│ ├── preprocess.py (Text cleaning)
-│ ├── train.py (Training and saving the model)
-│ └── predict.py (Loading model and making predictions)
-├── data/
-│ └── fake_or_real_news.csv (Dataset)
-├── models/
-│ ├── model.pkl (Trained model)
-│ ├── vectorizer.pkl (TF-IDF vectorizer)
-│ └── label_map.json (Label mapping)
-├── requirements.txt
-├── README.md
-└── .gitignore
 
  How to run the project locally
 1. Create and activate a virtual environment
@@ -151,3 +133,4 @@ Clean and modular code structure
 Practical deployment skills
 
 Real-world problem solving
+
