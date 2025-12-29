@@ -23,7 +23,7 @@ The goal is not only to achieve good performance, but also to build a **clean, r
 
 ##  Machine Learning Approach
 
-### * Text Preprocessing
+###  Text Preprocessing
 The news text is cleaned and normalized using common NLP techniques:
 - Lowercasing  
 - Punctuation removal  
@@ -31,11 +31,11 @@ The news text is cleaned and normalized using common NLP techniques:
 - Stopword removal  
 - Stemming  
 
-### * Feature Engineering
+###  Feature Engineering
 - TF-IDF vectorization  
 - Unigrams and bigrams to capture individual words and short phrases  
 
-### * Model
+###  Model
 - **Linear Support Vector Machine (LinearSVC)**  
 - Selected for its strong performance on high-dimensional, sparse text data  
 
@@ -52,13 +52,13 @@ The model is evaluated using:
 This project uses the **TextDB3 (Fake or Real News)** dataset, which is publicly available on Kaggle.  
 The dataset is designed for **binary text classification**, making it suitable for fake news detection tasks.
 
-### * Key Characteristics
+###  Key Characteristics
 - **Domain:** News & Media  
 - **Task Type:** Binary Classification  
 - **Data Type:** Text  
 - **Language:** English  
 
-### * Dataset Structure
+###  Dataset Structure
 Each record in the dataset represents a single news article and includes:
 - **`title`** – The headline of the news article  
 - **`text`** – The full body text of the article  
@@ -66,17 +66,17 @@ Each record in the dataset represents a single news article and includes:
   - `FAKE` → Fake news  
   - `REAL` → Real news  
 
-### * Use Cases
+###  Use Cases
 This dataset is commonly used for:
 - Fake news detection systems  
 - Text classification experiments  
 - NLP preprocessing and feature engineering (TF-IDF, embeddings)  
 - Model comparison (Naive Bayes, Logistic Regression, LSTM, Transformers)  
 
-### * Data Source
+###  Data Source
 The dataset was collected from multiple online news sources and curated for research and educational purposes.
 
-🔗 **Dataset link:**  
+ **Dataset link:**  
 https://www.kaggle.com/datasets/hassanamin/textdb3  
 
 ---
@@ -98,3 +98,4 @@ This project demonstrates a practical application of machine learning for misinf
 - Real-world deployment  
 
 It is well-suited for **students, researchers, and anyone interested in NLP and applied machine learning**.
+
