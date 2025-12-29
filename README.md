@@ -1,6 +1,8 @@
 # 📰 Fake News Detector  
 **Machine Learning Pipeline + Streamlit App**
 
+the app link: https://fake-news-detector-dp62flhfseki4ankcwkr77.streamlit.app/
+
 An end-to-end **Fake vs. Real News classification system** built using machine learning and natural language processing.  
 This project covers the full ML lifecycle — from text preprocessing and model training to deployment in an interactive **Streamlit web app**.
 
@@ -98,4 +100,5 @@ This project demonstrates a practical application of machine learning for misinf
 - Real-world deployment  
 
 It is well-suited for **students, researchers, and anyone interested in NLP and applied machine learning**.
+
 
