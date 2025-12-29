@@ -66,25 +66,10 @@ with tab1:
     text_input = st.text_area(
         "Paste your news article (English):",
         height=220,
-        placeholder="Paste the full article text here...",
+        placeholder="Paste the full article text  streamlit run app/streamlit_app.pyhere...",
     )
 
-    col_a, col_b = st.columns([1, 1])
-    with col_a:
-        example_fake = st.button("Use example (sensational)")
-    with col_b:
-        example_real = st.button("Use example (neutral)")
-
-    if example_fake:
-        text_input = (
-            "SHOCKING discovery!!! Scientists CONFIRM a miracle cure that big pharma has been hiding. "
-            "Click now before it gets deleted!!!"
-        )
-    if example_real:
-        text_input = (
-            "Officials said the committee will publish its quarterly report on Tuesday, "
-            "citing updated economic indicators and revisions to prior estimates."
-        )
+   
 
 with tab2:
     uploaded = st.file_uploader("Upload a .txt file", type=["txt"])
@@ -137,9 +122,33 @@ if predict_clicked:
 
             # Confidence-like indicator (optional but helpful)
             if conf is not None:
-                st.write("Confidence indicator (approx.):")
-                st.progress(min(max(conf, 0.0), 1.0))
-                st.caption("This is an AI confidence indicator, not a guaranteed truth.")
+                conf_clamped = min(max(conf, 0.0), 1.0)
+                conf_percent = round(conf_clamped * 100, 1)
+
+                st.write(f"**Confidence in this prediction: {conf_percent}%**")
+                st.progress(conf_clamped)
+
+                # User-friendly explanation
+                if conf_percent < 50:
+                    confidence_text = (
+                    "Low confidence: the text is very short, unclear, or does not look like a real news article."
+                        )
+                elif conf_percent < 75:
+                    confidence_text = (
+                    "Medium confidence: the text has some news-like patterns, but the signal is not strong."
+                    )
+                else:
+                    confidence_text = (
+                    "High confidence: the text strongly matches patterns seen in real or fake news articles."
+                    )
+
+                st.caption(
+                    confidence_text
+                    + " This score shows how confident the AI is — it does NOT mean the article is "
+                    + f"{conf_percent}% fake or real."
+                )
+
+            
 
             # Extra guidance for users
             with st.expander("Tips to verify news (recommended)"):
