@@ -49,7 +49,7 @@ This project uses the TextDB3 (Fake or Real News) dataset, which is publicly ava
 
 The dataset contains news articles labeled as either fake or real, making it well-suited for training and evaluating Natural Language Processing (NLP) and machine learning models for misinformation detection.
 
-🔹 Key Characteristics
+* Key Characteristics
 
 Domain: News & Media
 
@@ -59,7 +59,7 @@ Data Type: Textual data
 
 Language: English
 
-🔹 Dataset Structure
+* Dataset Structure
 
 Each record in the dataset represents a single news article and includes the following features:
 
@@ -73,7 +73,7 @@ FAKE → Fake news
 
 REAL → Real news
 
-🔹 Use Cases
+* Use Cases
 
 This dataset is commonly used for:
 
@@ -85,8 +85,9 @@ NLP preprocessing techniques (tokenization, vectorization, TF-IDF, embeddings)
 
 Model comparison (e.g., Naive Bayes, Logistic Regression, LSTM, Transformers)
 
-🔹 Data Source
+* Data Source
 
 The dataset was collected from multiple online news sources and curated for research and educational purposes.
 
 🔗 Dataset link: https://www.kaggle.com/datasets/hassanamin/textdb3
+
