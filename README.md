@@ -1,136 +1,92 @@
-Fake News Detector
+# 📰 Fake News Detector (ML Pipeline + Streamlit App)
 
-This project is a Fake vs Real News detection system built using machine learning and natural language processing.
-It takes raw news text as input and predicts whether the article is REAL or FAKE, then presents the result through a simple Streamlit web interface.
+A complete end-to-end **Fake vs Real News classification system** built using machine learning.  
+The project covers the full ML lifecycle: preprocessing, training, inference, and deployment via a Streamlit web app.
 
-The goal of this project was to move beyond notebooks and build something that looks and feels like a real ML product.
+---
 
- Why this project?
+##  Project Overview
 
-Fake news has become a serious problem, affecting public trust, media credibility, and decision-making.
-This project explores how machine learning can help identify misleading or false news articles automatically.
+Fake news poses serious risks to public trust and information integrity.  
+This project aims to automatically classify news articles as **REAL** or **FAKE** using natural language processing and machine learning.
 
-It was built as a portfolio project to demonstrate practical ML skills, clean code structure, and deployment readiness.
+**Key highlights:**
+- Clean, modular ML pipeline (not a notebook-only project)
+- Reusable preprocessing and inference code
+- Trained TF-IDF + Linear SVM model
+- Interactive Streamlit web application
+- Portfolio-ready structure
 
-How it works 
-1. Text preprocessing
+---
 
-Each news article goes through a cleaning process:
+##  Machine Learning Approach
 
-Convert text to lowercase
+### Pipeline
+1. **Text Preprocessing**
+   - Lowercasing
+   - Punctuation removal
+   - Contraction expansion
+   - Stopword removal
+   - Stemming
 
-Remove punctuation
+2. **Feature Engineering**
+   - TF-IDF Vectorization
+   - Unigrams + Bigrams
 
-Expand contractions 
+3. **Model**
+   - Linear Support Vector Machine (LinearSVC)
+   - Chosen for strong performance on high-dimensional sparse text data
 
-Remove common stopwords
+4. **Evaluation**
+   - Accuracy
+   - Precision, Recall, F1-score
+   - Confusion Matrix
 
-Apply stemming
+---
 
-This helps reduce noise and improve model performance.
+## Dataset 
+This project uses the TextDB3 (Fake or Real News) dataset, which is publicly available on Kaggle. The dataset is designed for binary text classification tasks, specifically for detecting fake news vs. real news based on textual content.
 
-2. Feature extraction
+The dataset contains news articles labeled as either fake or real, making it well-suited for training and evaluating Natural Language Processing (NLP) and machine learning models for misinformation detection.
 
-Text is converted into numerical features using TF-IDF
+🔹 Key Characteristics
 
-Both unigrams and bigrams are used to capture important word patterns
+Domain: News & Media
 
-3. Model
+Task Type: Binary Classification
 
-A Linear Support Vector Machine (LinearSVC) is trained
+Data Type: Textual data
 
-This model works very well for high-dimensional text data like TF-IDF vectors
+Language: English
 
-4. Prediction
+🔹 Dataset Structure
 
-The trained model predicts whether an article is REAL or FAKE
+Each record in the dataset represents a single news article and includes the following features:
 
-A confidence-like score is shown based on the model’s decision function
+title – The headline of the news article
 
+text – The full body text of the article
 
- How to run the project locally
-1. Create and activate a virtual environment
+label – The class label indicating the authenticity of the news
 
-python -m venv .venv
-.venv\Scripts\activate
+FAKE → Fake news
 
-2. Install dependencies
+REAL → Real news
 
-pip install -r requirements.txt
+🔹 Use Cases
 
-3. Train the model
+This dataset is commonly used for:
 
-python -m src.train --data data/fake_or_real_news.csv
+Fake news detection systems
 
-This step trains the model and saves all required files into the models/ folder.
+Text classification experiments
 
-4. Run a prediction from the terminal
+NLP preprocessing techniques (tokenization, vectorization, TF-IDF, embeddings)
 
-python -m src.predict --text "This is a sample news article"
+Model comparison (e.g., Naive Bayes, Logistic Regression, LSTM, Transformers)
 
-5. Launch the Streamlit app
+🔹 Data Source
 
-streamlit run app/streamlit_app.py
+The dataset was collected from multiple online news sources and curated for research and educational purposes.
 
-The app will open in your browser and allow you to paste text or upload a .txt file.
-
- Streamlit Web App
-
-The web app allows users to:
-
-Paste a news article or upload a text file
-
-Get a REAL / FAKE prediction
-
-See a confidence-like indicator for the prediction
-
-Note: The model uses LinearSVC, which does not output true probabilities.
-The confidence shown is a transformed decision score for user interpretation.
-
- Dataset
-
-Binary labeled dataset (REAL / FAKE)
-
-English-language news articles
-
-Roughly balanced classes
-
-Used for learning and experimentation purposes
-
- Limitations
-
-TF-IDF does not capture deep semantic meaning
-
-English-only dataset
-
-No transformer-based models 
-
-Confidence score is not a calibrated probability
-
- Future improvements
-
-Add explainability (LIME / SHAP) to highlight influential words
-
-Experiment with transformer models (BERT)
-
-Improve confidence calibration
-
-Deploy publicly using Hugging Face Spaces
-
-Add logging and monitoring
-
- About the author
-
-Daad Alhassan
-Data Science / Machine Learning Portfolio Project
-
-This project demonstrates:
-
-End-to-end ML pipeline design
-
-Clean and modular code structure
-
-Practical deployment skills
-
-Real-world problem solving
-
+🔗 Dataset link: https://www.kaggle.com/datasets/hassanamin/textdb3
