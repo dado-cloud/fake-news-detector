@@ -62,9 +62,9 @@ The dataset is designed for **binary text classification**, making it suitable f
 
 ###  Dataset Structure
 Each record in the dataset represents a single news article and includes:
-- **`title`** – The headline of the news article  
-- **`text`** – The full body text of the article  
-- **`label`** – The authenticity label  
+- **`title`**  The headline of the news article  
+- **`text`**  The full body text of the article  
+- **`label`**  The authenticity label  
   - `FAKE` → Fake news  
   - `REAL` → Real news  
 
@@ -100,6 +100,7 @@ This project demonstrates a practical application of machine learning for misinf
 - Real-world deployment  
 
 It is well-suited for **students, researchers, and anyone interested in NLP and applied machine learning**.
+
 
 
 
