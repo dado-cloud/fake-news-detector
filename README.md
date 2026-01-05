@@ -6,7 +6,7 @@ the app link: https://fake-news-detector-dp62flhfseki4ankcwkr77.streamlit.app/
 An end-to-end **Fake vs. Real News classification system** built using machine learning and natural language processing.  
 This project covers the full ML lifecycle from text preprocessing and model training to deployment in an interactive **Streamlit web app**.
 
----
+
 
 ##  Project Overview
 
@@ -21,7 +21,7 @@ The goal is not only to achieve good performance, but also to build a **clean, r
 - TF-IDF + Linear SVM text classification model  
 - Interactive Streamlit web application  
 
----
+
 
 ##  Machine Learning Approach
 
@@ -47,7 +47,7 @@ The model is evaluated using:
 - Precision, Recall, and F1-score  
 - Confusion Matrix  
 
----
+
 
 ##  Dataset
 
@@ -81,7 +81,7 @@ The dataset was collected from multiple online news sources and curated for rese
  **Dataset link:**  
 https://www.kaggle.com/datasets/hassanamin/textdb3  
 
----
+
 
 ##  Streamlit Web App
 
@@ -90,7 +90,6 @@ The trained model is deployed using **Streamlit**, allowing users to:
 - Instantly receive a **REAL** or **FAKE** prediction  
 - Interact with the model through a simple and user-friendly interface  
 
----
 
 ##  Final Notes
 
@@ -100,6 +99,7 @@ This project demonstrates a practical application of machine learning for misinf
 - Real-world deployment  
 
 It is well-suited for **students, researchers, and anyone interested in NLP and applied machine learning**.
+
 
 
 
