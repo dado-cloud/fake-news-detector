@@ -147,7 +147,7 @@ if predict_clicked:
             # ------------------ EXPLAINABILITY (GRAPH) ------------------
             explanation = explain_text(text_input, top_k=10)
 
-            with st.expander("🧠 Why did the model predict this? (Explainability)"):
+            with st.expander(" Why did the model predict this? (Explainability)"):
                 st.caption(
                     "These are the **most influential words** in the text. "
                     "Longer bars mean the word had a stronger impact on the prediction."
@@ -212,3 +212,4 @@ if predict_clicked:
             st.exception(e)
 
 st.divider()
+
